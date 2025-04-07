@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=3 uid="uid://cp3hom1rsx2q7"]
+
+[ext_resource type="Texture2D" uid="uid://dqcgoy41w0uvk" path="res://sprites/rock-meter.png" id="1_g2rai"]
+[ext_resource type="Texture2D" uid="uid://c1v63nxagr6ri" path="res://sprites/rock-bar.png" id="2_5ppo2"]
+[ext_resource type="Script" uid="uid://dkghvouhtwr00" path="res://cena/rock.gd" id="2_esuea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esuea"]
+atlas = ExtResource("2_5ppo2")
+region = Rect2(0, 0, 38, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvcaq"]
+atlas = ExtResource("2_5ppo2")
+region = Rect2(38, 0, 38, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r50f"]
+atlas = ExtResource("2_5ppo2")
+region = Rect2(76, 0, 38, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elvud"]
+atlas = ExtResource("2_5ppo2")
+region = Rect2(114, 0, 38, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24skx"]
+atlas = ExtResource("2_5ppo2")
+region = Rect2(152, 0, 38, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2qvm"]
+atlas = ExtResource("2_5ppo2")
+region = Rect2(190, 0, 38, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdr03"]
+atlas = ExtResource("2_5ppo2")
+region = Rect2(228, 0, 38, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48dnl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esuea")
+}],
+"loop": false,
+"name": &"0",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvcaq")
+}],
+"loop": false,
+"name": &"1",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r50f")
+}],
+"loop": false,
+"name": &"2",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elvud")
+}],
+"loop": false,
+"name": &"3",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24skx")
+}],
+"loop": false,
+"name": &"4",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2qvm")
+}],
+"loop": false,
+"name": &"5",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdr03")
+}],
+"loop": false,
+"name": &"6",
+"speed": 1.0
+}]
+
+[node name="rock" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_g2rai")
+script = ExtResource("2_esuea")
+
+[node name="barra" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_48dnl")
+animation = &"3"
+autoplay = "3"

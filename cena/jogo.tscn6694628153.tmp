@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm5ymhyca7qb"]
+
+[ext_resource type="PackedScene" uid="uid://clax6qj2xfw1m" path="res://cena/captador.tscn" id="1_2s4eg"]
+[ext_resource type="Script" uid="uid://c231mg834lmuy" path="res://cena/jogo.gd" id="1_8xhey"]
+[ext_resource type="PackedScene" uid="uid://8piwjevlsooe" path="res://cena/nota.tscn" id="2_8xhey"]
+[ext_resource type="PackedScene" uid="uid://c7cviiupjyive" path="res://cena/acerto.tscn" id="4_mpjyy"]
+
+[node name="jogo" type="Node2D"]
+script = ExtResource("1_8xhey")
+cena_de_nota = ExtResource("2_8xhey")
+
+[node name="c_verde" parent="." instance=ExtResource("1_2s4eg")]
+position = Vector2(460, 600)
+
+[node name="c_vermelho" parent="." instance=ExtResource("1_2s4eg")]
+position = Vector2(550, 600)
+cor = "vermelho"
+
+[node name="c_amarelo" parent="." instance=ExtResource("1_2s4eg")]
+position = Vector2(640, 600)
+cor = "amarelo"
+
+[node name="c_azul" parent="." instance=ExtResource("1_2s4eg")]
+position = Vector2(730, 600)
+cor = "azul"
+
+[node name="c_laranja" parent="." instance=ExtResource("1_2s4eg")]
+position = Vector2(820, 600)
+cor = "laranja"
+
+[node name="acerto" parent="." instance=ExtResource("4_mpjyy")]
