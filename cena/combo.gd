@@ -17,9 +17,12 @@ func setcombo(cmb: int):
 	else:
 		targetcol = Color(0,0,255,255)
 	
+func toarray(col: Color):
+	return [col.r,col.g,col.b,col.a]
 func _process(delta: float) -> void:
 	if label_settings.font_color == targetcol:
 		return
-	var fc: Color = label_settings.font_color
+	var fc: Color = toarray(label_settings.font_color)
 	label_settings.font_color = targetcol
+	
 	#label_settings.font_color = Color(int(fc.r+(combo.r-fc.r)*0.2*delta),int(fc.g+(combo.g-fc.g)*0.2*delta),int(fc.b+(combo.b-fc.b)*0.2*delta))
