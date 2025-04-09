@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbnvmy5tjkehu"]
+
+[ext_resource type="Texture2D" uid="uid://dvh4m6vmw1oj4" path="res://sprites/barra.png" id="1_0dlua"]
+[ext_resource type="Script" uid="uid://xs2jb002yt2x" path="res://cena/barra.gd" id="2_ybxjw"]
+
+[node name="barra" type="Sprite2D"]
+z_index = -1
+texture = ExtResource("1_0dlua")
+script = ExtResource("2_ybxjw")

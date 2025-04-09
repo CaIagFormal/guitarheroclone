@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bm5ymhyca7qb"]
+[gd_scene load_steps=10 format=3 uid="uid://bm5ymhyca7qb"]
 
 [ext_resource type="PackedScene" uid="uid://clax6qj2xfw1m" path="res://cena/captador.tscn" id="1_2s4eg"]
 [ext_resource type="Script" uid="uid://c231mg834lmuy" path="res://cena/jogo.gd" id="1_8xhey"]
@@ -8,25 +8,10 @@
 [ext_resource type="FontFile" uid="uid://8xvvp364xyv8" path="res://fontes/SIXTY.TTF" id="5_4bcru"]
 [ext_resource type="PackedScene" uid="uid://cp3hom1rsx2q7" path="res://cena/rock.tscn" id="6_3118s"]
 [ext_resource type="AudioStream" uid="uid://coi335c1mf1c8" path="res://musica/A Lone Prayer - Persona 1 (PSP).mp3" id="7_3vra5"]
-[ext_resource type="Script" uid="uid://c67e3cm2ra3wv" path="res://cena/combo.gd" id="9_k2165"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3118s"]
 font = ExtResource("5_4bcru")
 font_size = 50
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 0
-
-[sub_resource type="LabelSettings" id="LabelSettings_dqc8a"]
-font = ExtResource("5_4bcru")
-font_size = 20
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 0
-
-[sub_resource type="LabelSettings" id="LabelSettings_k2165"]
-font = ExtResource("5_4bcru")
-font_size = 30
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 0
@@ -36,6 +21,7 @@ script = ExtResource("1_8xhey")
 cena_de_acerto = ExtResource("4_mpjyy")
 cena_de_nota = ExtResource("2_8xhey")
 cena_de_barra = ExtResource("4_dqc8a")
+gravando = true
 
 [node name="c_verde" parent="." instance=ExtResource("1_2s4eg")]
 position = Vector2(460, 600)
@@ -73,22 +59,5 @@ position = Vector2(950, 550)
 
 [node name="musica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_3vra5")
-
-[node name="desvio" type="Label" parent="."]
-offset_left = 263.0
-offset_top = 557.0
-offset_right = 388.0
-offset_bottom = 610.0
-text = "----"
-label_settings = SubResource("LabelSettings_dqc8a")
-
-[node name="combo" type="Label" parent="."]
-offset_left = 266.0
-offset_top = 484.0
-offset_right = 391.0
-offset_bottom = 589.0
-text = "x0 Combo"
-label_settings = SubResource("LabelSettings_k2165")
-script = ExtResource("9_k2165")
 
 [connection signal="timeout" from="prox_nota" to="." method="_on_timer_timeout"]

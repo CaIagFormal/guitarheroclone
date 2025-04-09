@@ -4,12 +4,15 @@ extends Area2D
 @export var cor: String;
 @export var velocidade: float;
 @export var targetx: float;
+@export var gravando: bool;
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 signal fora_da_tela
 
 func _ready() -> void:
 	anim.play(cor)
+	if gravando:
+		anim.self_modulate.a = 0.75
 
 func _process(delta) -> void:
 	self.position.y += velocidade * delta;
